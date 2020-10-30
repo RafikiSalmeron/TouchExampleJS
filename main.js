@@ -5,6 +5,10 @@ function startup() {
     el.addEventListener("touchcancel", handleCancel, false);
     el.addEventListener("touchmove", handleMove, false);
     el.addEventListener("click", click);
+
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener("deviceorientation", orientacion(event));
+   }
 }
 
 window.onload = startup;
@@ -27,4 +31,9 @@ function handleMove(evt) {
 }
 function click(){
     alert('Click');
+}
+
+function orientacion(evt){
+    document.getElementById('logOr').innerHTML = "Alpha: " + evt.alpha + " Beta: "  + evt.beta + " Gamma: " + evt.gamma ;
+
 }
