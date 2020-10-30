@@ -7,7 +7,8 @@ function startup() {
     el.addEventListener("click", click);
 }
 
-window.onload = startup();
+window.onload = startup;
+
 function handleStart(evt) {
     evt.preventDefault();
     document.getElementById('log').innerHTML = "TouchStart";
