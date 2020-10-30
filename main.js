@@ -7,7 +7,7 @@ function startup() {
     el.addEventListener("click", click);
 
     if (window.DeviceOrientationEvent) {
-        window.addEventListener("deviceorientation", orientacion(event));
+        window.addEventListener("deviceorientation", orientacion);
    }
 }
 
