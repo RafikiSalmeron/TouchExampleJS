@@ -11,19 +11,19 @@ window.onload = startup;
 
 function handleStart(evt) {
     evt.preventDefault();
-    document.getElementById('log').innerHTML = "TouchStart";
+    document.getElementById('log').innerHTML = "TouchStart " + evt.touches[0].pageX + " " + evt.touches[0].pageY;
 }
 function handleEnd(evt) {
     evt.preventDefault();
-    document.getElementById('log').innerHTML = "TouchEnd";
+    document.getElementById('log').innerHTML = "TouchEnd " + evt.touches[0].pageX + " " + evt.touches[0].pageY;
 }
 function handleCancel(evt) {
     evt.preventDefault();
-    document.getElementById('log').innerHTML = "TouchCancel";
+    document.getElementById('log').innerHTML = "TouchCancel " + evt.touches[0].pageX + " " + evt.touches[0].pageY;
 }
 function handleMove(evt) {
     evt.preventDefault();
-    document.getElementById('log').innerHTML = "TouchMove";
+    document.getElementById('log').innerHTML = "TouchMove " + evt.touches[0].pageX + " " + evt.touches[0].pageY;
 }
 function click(){
     alert('Click');
